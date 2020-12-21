@@ -1,0 +1,21 @@
+{
+  "name": "mertschat",
+  "version": "1.0.0",
+  "description": "Reatime chat with rooms",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server"
+  },
+  "author": "Mert Cebeci",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "git": "^0.1.5",
+    "moment": "^2.29.1",
+    "socket.io": "^3.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
