@@ -14,7 +14,7 @@ const socket = io();
 socket.emit('joinRoom', {username, room});
 
 //Message from Server
-socket.on ('message', message =>{0
+socket.on ('message', message =>{
     console.log(message);
     outputMessage(message);
 
@@ -42,7 +42,7 @@ chatForm.addEventListener('submit', (e) =>{
 function outputMessage(message){
     const div = document.createElement('div')
     div.classList.add('message');
-    div.innerHTML = `<p class="meta">${message.user}<span>${message.time}</span></p>
+    div.innerHTML = `<p class="meta">${message.username}<span> ${message.time}</span></p>
     <p class="text">
        ${message.text}
     </p>`;
