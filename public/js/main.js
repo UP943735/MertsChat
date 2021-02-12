@@ -6,8 +6,6 @@ const{username, room} = Qs.parse(location.search, {
     ignoreQueryPrefix: true
 })
 
-console.log(username, room);
-
 const socket = io();
 
 //Join chatroom
@@ -18,7 +16,7 @@ socket.on ('message', message =>{
     console.log(message);
     outputMessage(message);
 
-    //Scroll Down
+    //Scroll Downs when a new message is sent
     chatMessages.scrollTop = chatMessages.scrollHeight;
 });
 
